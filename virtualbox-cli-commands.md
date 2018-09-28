@@ -18,4 +18,12 @@ VBoxManage startvm <uuid|name> --type headless
 VBoxManage startvm <uuid|name>
 ```
 
-+ 
++ to get back up from vms:
+```bash
+VBoxManage export <uuid|name> -o <backup-name>.ova
+```
+
++ to import an .ova machine:
+```bash
+VBoxManage import <backup-name>.ova
+```
