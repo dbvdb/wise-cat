@@ -27,3 +27,8 @@ VBoxManage export <uuid|name> -o <backup-name>.ova
 ```bash
 VBoxManage import <backup-name>.ova
 ```
+
++ to see all the virtual box ostypes:
+```bash
+VBoxManage list ostypes
+```

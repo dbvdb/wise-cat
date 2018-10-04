@@ -34,6 +34,11 @@ network:
         addresses: [8.8.8.8, 8.8.4.4]
 ```
 
+- Before applying the change, check whether the configuration are valid or not.
+```bash
+netplan try
+```
+
 - Configuration can be applied after:
 ```bash
 netplan apply
