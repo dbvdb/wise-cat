@@ -32,3 +32,12 @@ VBoxManage import <backup-name>.ova
 ```bash
 VBoxManage list ostypes
 ```
+
++ if your virtual machine is running, and you want to close its window and
+    trying to bring it up in headless mode, first save the state and then bring
+    it up headless:
+
+```bash
+VBoxManage controlvm <uuid|name> savestate
+VBoxManage startvm <uuid|name> --type headless
+```
