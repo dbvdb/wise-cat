@@ -1,27 +1,31 @@
 # HOW TO MAKE IPTABLES RULES PERSISTENT ON UBUNTU 18.04
 
-1) save current rules:
+1) Save all current rules:
 
 ```bash
 iptables-save > /etc/iptables/iptables-rules.conf
 ```
 
-2) make a bash script file in ``` vim /etc/iptables/flush-iptables.sh ```
+2) Make a bash script file in ``` vim /etc/iptables/flush-iptables.sh ```
 to flush iptables rules.
 
-3) add this commands to ``` flush-iptables.sh ```:
+3) Add this commands to ``` flush-iptables.sh ```:
 
 ```bash
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
 iptables -F
 iptables -X
 iptables -tnat -F
 iptables -tnat -X
 iptables -tmangle -F
 iptables -tmangle -X
-iptables 
+iptables -traw -F
+iptables -traw -X
 
 ```
-4) write systemd service for iptables, create a file on ```
+4) Write systemd service for iptables, create a file on ```
 /etc/systemd/system/iptablesd.service ``` and copy following lines to it:
 
 ```bash
@@ -40,7 +44,7 @@ RemainAfterExit=yes
 WantedBy=multi-user.target
 ```
 
-5) then run these commands to run service:
+5) Then run these commands to run service:
 
 ```bash
 systemctl daemon-reload
