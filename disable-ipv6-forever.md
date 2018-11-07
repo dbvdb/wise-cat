@@ -5,3 +5,4 @@
 ```bash
 GRUB_CMDLINE_LINUX='ipv6.disable=1'
 ```
++ Be Happy! you disabled IPv6 successfully!
