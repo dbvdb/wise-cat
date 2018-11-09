@@ -30,7 +30,7 @@ iptables -traw -X
 
 ```bash
 [Unit]
-Description=Packet Filtering Framework
+Description=Iptables Persistency Framework
 DefaultDependencies=no
 After=systemd-sysctl.service
 Before=sysinit.target
