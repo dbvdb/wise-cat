@@ -1,5 +1,12 @@
 # ALL YOU NEED TO WORK WITH VIRTUALBOX
 
+#### Global virtualbox property
++ to change default virtualbox machine location:
+```bash
+vboxmanage setproperty machinefolder /path/to/directory
+```
+
+#### Management of virtualbox machines
 + to list all vms and running vms:
 ```bash
 VBoxManage list vms
