@@ -5,6 +5,10 @@
 ```bash
 GRUB_CMDLINE_LINUX='ipv6.disable=1'
 ```
++ Second, you should update grub by:
+```bash
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 + Be Happy! you disabled IPv6 successfully!
 
 + Notice that if you want to disable IPv6 in safe mode you should add the
@@ -13,3 +17,4 @@ GRUB_CMDLINE_LINUX='ipv6.disable=1'
 ```bash
 GRUB_CMDLINE_LINUX_DEFAULT='ipv6.disable=1'
 ```
+
