@@ -1,6 +1,6 @@
-+ To add universe use the following command
++ To add universe, main, multiverse or restricted use the following command
 ```bash
-sudo apt add-apt-repository universe
+sudo apt add-apt-repository universe | main | multiverse | restricted 
 ```
 
 + An older way to do that for older distributions is:
