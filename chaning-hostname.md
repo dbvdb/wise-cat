@@ -1,6 +1,6 @@
 ### This document explains how to change the hostname aftern installation
 
-######REDHAT
+###### REDHAT
 1- Open the server's `/etc/sysconfig/network` file:
 
 ```bash

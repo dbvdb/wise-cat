@@ -1,0 +1,3 @@
+### shopt command options
+
+histappend
