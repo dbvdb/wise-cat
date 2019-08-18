@@ -10,3 +10,19 @@ source /usr/local/bin/virtualenvwrapper.sh" > ~/.bashrc
 
 source .bashrc
 ```
+
+- To create a new virtual environment:
+```bash
+mkvirtualenv <name>
+```
+
+- To work on a created virtual environment:
+```bash
+workon <name>
+
+```
+
+- To delete a created virtual environment:
+```bash
+rmvirtualenv <name>
+```
